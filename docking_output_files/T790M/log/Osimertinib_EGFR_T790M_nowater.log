@@ -19,7 +19,7 @@ AutoDock Vina v1.2.7
 
 Scoring function : vina
 Rigid receptor: proteins_pdbqt/EGFR_T790M_nowater.pdbqt
-Ligand: ligand_pdbqt/Caffeine.pdbqt
+Ligand: ligand_pdbqt/Osimertinib.pdbqt
 Grid center: X -51.263 Y -0.5473 Z -20.4194
 Grid size  : X 25 Y 25 Z 25
 Grid space : 0.375
@@ -28,7 +28,7 @@ CPU: 0
 Verbosity: 1
 
 Computing Vina grid ... done.
-Performing docking (random seed: -141460101) ... 
+Performing docking (random seed: -1408990507) ... 
 0%   10   20   30   40   50   60   70   80   90   100%
 |----|----|----|----|----|----|----|----|----|----|
 ***************************************************
@@ -36,4 +36,4 @@ Performing docking (random seed: -141460101) ...
 mode |   affinity | dist from best mode
      | (kcal/mol) | rmsd l.b.| rmsd u.b.
 -----+------------+----------+----------
-   1       -5.306          0          0
+   1       -7.308          0          0
