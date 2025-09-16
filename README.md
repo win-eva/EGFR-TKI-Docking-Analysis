@@ -1,4 +1,4 @@
-# EGFR Mutation Docking Analysis
+# EGFR TKI Docking Analysis
 
 Docking study of EGFR wildtype and resistance mutations (L858R, T790M, Exon20 insertions) with clinically relevant tyrosine kinase inhibitors (TKIs) and control ligands.  
 This repository summarizes results, figures, and discussion of binding affinities obtained using AutoDock Vina.
