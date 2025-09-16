@@ -46,7 +46,7 @@ Mean ± SD affinities (kcal/mol):
 
 ### Heatmap
 
-![Heatmap](data/figures/heatmap.png)  
+![Heatmap](results/figures/heatmap.png)  
 *Best binder per receptor circled in black.*
 
 ---
@@ -58,7 +58,7 @@ Comparison of binding in the same pocket:
 - **Osimertinib**: 2 H-bonds (T854), weaker fit  
 - **Mobocertinib**: 4 H-bonds (M793, T790, L718), stronger fit  
 
-![L858R pocket](data/figures/l858r.png)
+![L858R pocket](results/figures/l858r.png)
 
 ---
 
@@ -67,7 +67,7 @@ Clinical relevance of Osimertinib:
 - **Osimertinib**: 2 H-bonds (D855, N842), strong binding  
 - **Erlotinib**: no H-bonds, weak fit  
 
-![T790M pocket](data/figures/t790m.png)
+![T790M pocket](results/figures/t790m.png)
 
 ---
 
@@ -75,7 +75,7 @@ Clinical relevance of Osimertinib:
 - **Afatinib**: very strong docking score (-9.4 kcal/mol) despite only 1 H-bond (R841).  
 - **STX-721 (original ligand of 9GL8)** shown for pocket size comparison.  
 
-![Exon20 pocket](data/figures/exon20.png)
+![Exon20 pocket](results/figures/exon20.png)
 
 ---
 
