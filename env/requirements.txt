@@ -1,0 +1,6 @@
+pandas
+numpy
+meeko
+chembl_webresource_client
+matplotlib
+seaborn
