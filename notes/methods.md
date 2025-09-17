@@ -1,5 +1,7 @@
 # Methods
 
+Unless otherwise stated, all Python code in this workflow can be run after installing the packages listed in `requirements.txt`. Steps requiring a dedicated conda environment (e.g., ligand preparation) are noted individually.
+
 This document outlines the workflow for EGFR-TKI docking analysis, including protein and ligand preparation, docking procedure, and data analysis.
 
 ---
@@ -39,6 +41,8 @@ Proteins were downloaded as `.pdb` or `.cif` files and converted to `.pdb` using
 **Control Ligands:** Aspirin, Ibuprofen, Caffeine
 
 Ligands were retrieved from ChEMBL or manually sourced from PubChem. Canonical SMILES were read into Python, duplicates removed, and 3D structures generated using RDKit. Hydrogens were added, and torsions and charges were prepared using **Meeko**. Each ligand was saved as a `.pdbqt` file ready for docking. 3D conformer generation used the ETKDG method in **RDKit**; embeddings were generated without a fixed random seed to ensure compatibility across environments.
+
+**Note:** Ligand preparation requires a dedicated conda environment (`ligprep_env.yml`) to ensure compatibility with **RDKit** and **Meeko**. This environment is separate from the general `requirements.txt` used for data fetching, docking, and analysis.
 
 ---
 
