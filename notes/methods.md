@@ -34,13 +34,11 @@ Proteins were downloaded as `.pdb` or `.cif` files and converted to `.pdb` using
 
 ## 2. Ligand Preparation
 
-**Active Ligands (TKIs):**
-- Gefitinib, Erlotinib, Afatinib, Mobocertinib, Osimertinib
+**Active Ligands (TKIs):** Gefitinib, Erlotinib, Afatinib, Mobocertinib, Osimertinib
 
-**Control Ligands:**
-- Aspirin, Ibuprofen, Caffeine
+**Control Ligands:** Aspirin, Ibuprofen, Caffeine
 
-Ligands were retrieved from ChEMBL or manually sourced from PubChem. SMILES were converted to 3D structures and prepared as `.pdbqt` files using **RDKit** and **Meeko**.
+Ligands were retrieved from ChEMBL or manually sourced from PubChem. Canonical SMILES were read into Python, duplicates removed, and 3D structures generated using RDKit. Hydrogens were added, and torsions and charges were prepared using **Meeko**. Each ligand was saved as a `.pdbqt` file ready for docking. 3D conformer generation used the ETKDG method in **RDKit**; embeddings were generated without a fixed random seed to ensure compatibility across environments.
 
 ---
 
@@ -48,7 +46,7 @@ Ligands were retrieved from ChEMBL or manually sourced from PubChem. SMILES were
 
 - Water molecules, ions, and bound ligands were removed using **PyMOL**.
 - Receptors were converted to `.pdbqt` using **MGLTools** for AutoDock Vina docking.
-- Docking boxes were retrieved using **PyMOL**.
+- Docking boxes were defined using **PyMOL**.
 
 ---
 
