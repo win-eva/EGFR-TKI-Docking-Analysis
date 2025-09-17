@@ -80,7 +80,7 @@ Docking was performed using **AutoDock Vina 1.2.7**:
 ---
 
 ## 7. References
-
+All software executables were obtained from official sources and used without modification.
 1. RDKit: RDKit: Open-source cheminformatics; http://www.rdkit.org  
 2. Meeko: Meeko: Ligand Preparation Tool; https://github.com/forlilab/meeko  
 3. AutoDock Vina: Trott, O., Olson, A. J. AutoDock Vina: improving the speed and accuracy of docking with a new scoring function. *J Comput Chem* 2010, 31, 455–461.  
