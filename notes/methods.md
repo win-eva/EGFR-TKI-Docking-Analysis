@@ -8,7 +8,7 @@ This document outlines the workflow for EGFR-TKI docking analysis, including pro
 
 ## 1. Protein Fetching
 
-EGFR structures of wildtype and clinically relevant mutations (L858R, T790M, Exon20 insertion) were collected from the Protein Data Bank (PDB). An attempt was made to include at least one ligand-bound structure per inhibitor generation to provide structural diversity. However, due to limited availability of co-crystallised structures, full coverage across all generations was not always possible.
+EGFR structures of wildtype and clinically relevant mutations (L858R, T790M, Exon20 insertion) were collected from the Protein Data Bank (PDB). Efforts were made to include at least one ligand-bound structure per inhibitor generation to provide structural diversity. However, due to limited availability of co-crystallised structures, full coverage across all generations was not always possible.
 
 **Wildtype:**
 - 4WKQ (Gefitinib)
@@ -30,7 +30,7 @@ EGFR structures of wildtype and clinically relevant mutations (L858R, T790M, Exo
 - 9GC6 (A1IZ9) – second/third-generation surrogate
 - 9GL8 (STX-721) – captures mutant-induced pocket geometry
 
-Proteins were downloaded as `.pdb` or `.cif` files and converted to `.pdb` using PyMOL for consistency.
+Proteins were downloaded as `.pdb` or `.cif` files and converted to `.pdb` using PyMOL to ensure consistency.
 
 ---
 
@@ -42,7 +42,7 @@ Proteins were downloaded as `.pdb` or `.cif` files and converted to `.pdb` using
 
 Ligands were retrieved from ChEMBL or manually sourced from PubChem. Canonical SMILES were read into Python, duplicates removed, and 3D structures generated using RDKit. Hydrogens were added, and torsions and charges were prepared using **Meeko**. Each ligand was saved as a `.pdbqt` file ready for docking. 3D conformer generation used the ETKDG method in **RDKit**; embeddings were generated without a fixed random seed to ensure compatibility across environments.
 
-**Note:** Ligand preparation requires a dedicated conda environment (`ligprep_env.yml`) to ensure compatibility with **RDKit** and **Meeko**. This environment is separate from the general `requirements.txt` used for data fetching, docking, and analysis.
+**Note:** Ligand preparation requires a dedicated conda environment (`ligprep_env.yml`) to guarantee compatibility with **RDKit** and **Meeko**. This environment is separate from the general `requirements.txt` used for data fetching, docking, and analysis.
 
 ---
 
@@ -50,7 +50,7 @@ Ligands were retrieved from ChEMBL or manually sourced from PubChem. Canonical S
 
 - Water molecules, ions, and bound ligands were removed using **PyMOL**.
 - Receptors were converted to `.pdbqt` using **MGLTools** for AutoDock Vina docking.
-- Docking boxes were defined using **PyMOL**.
+- Docking boxes were defined using coordinates from the original ligand-binding sites using **PyMOL**.
 
 ---
 
@@ -69,9 +69,9 @@ Docking was performed using **AutoDock Vina 1.2.7**:
 ## 5. Analysis
 
 - Affinities extracted from Vina log files.
-- Average and standard deviation were calculated per mutation class.
+- Mean and standard deviation were calculated per mutation class.
 - Heatmaps and tables highlight the best binding ligand per receptor.
-- PDBQT docking poses visualised in **PyMOL**, including hydrogen bond analysis.
+- Docked PDBQT poses were visualised in **PyMOL**, including hydrogen bond analysis.
 
 ---
 
@@ -79,7 +79,7 @@ Docking was performed using **AutoDock Vina 1.2.7**:
 
 - Docking results are **indicative** and do not account for receptor flexibility or covalent binding.
 - High standard deviations may indicate PDB-specific bias.
-- MD simulations would be required for more accurate, dynamic binding predictions.
+- Molecular dynamics simulations would be required for more accurate, dynamic binding predictions.
 
 ---
 
