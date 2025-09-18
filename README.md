@@ -69,25 +69,30 @@ All results presented here were generated from the provided `.log` files; runnin
 - Mobocertinib’s shape/flexibility allows additional interactions, boosting its docking score. 
 
 ![L858R pocket](results/figures/l858r.png)
-**Figure 2.** L858R EGFR bound to Osimertinib (co-crystallised, PDB 6JWL) and Mobocertinib. Mobocertinib forms more hydrogen bonds in the same pocket, explaining its stronger predicted docking score.
+**Figure 2.** L858R EGFR bound to Osimertinib (co-crystallised, PDB 6JWL) and Mobocertinib (ligands *red*, key residues *green*). Mobocertinib forms more hydrogen bonds in the same pocket, explaining its stronger predicted docking score.
 
 ---
 
 **T790M mutation**  
-Clinical relevance of Osimertinib:  
-- **Osimertinib**: 2 H-bonds (D855, N842), strong binding despite resistance mutation 
-- **Erlotinib**: no H-bonds, weak fit  
+
+- Both ligands occupy the same T790M pocket.  
+- **Osimertinib:** 2 H-bonds (D855, N842) → strong predicted fit despite resistance mutation.  
+- **Erlotinib:** no H-bonds → weak predicted fit.  
+- Osimertinib’s structure allows it to maintain key interactions even in the presence of the T790M resistance mutation.   
 
 ![T790M pocket](results/figures/t790m.png)
+**Figure 3.** T790M EGFR bound to Osimertinib (co-crystallised, PDB 6JX0) and Erlotinib (ligands *red*, key residues *green*). Osimertinib forms hydrogen bonds in the pocket, explaining its higher predicted docking score, while Erlotinib lacks H-bonds, correlating with a weaker predicted fit.
 
 ---
 
 **Exon20 insertion**  
-- **Afatinib**: very strong docking score (-9.4 kcal/mol) despite only 1 H-bond (R841).   
+
+- **Afatinib:** Strong docking score (−9.4 kcal/mol) despite forming only one hydrogen bond with R841. Pocket geometry and ligand fit likely contribute more than H-bonds.
+- High docking score may be influenced by original PDB pocket size and shape.
+- **Clinical note:** Afatinib shows variable activity in Exon20 insertions; some reports suggest certain rare subtypes respond, highlighting the importance of pocket compatibility.
 
 ![Exon20 pocket](results/figures/exon20.png)
-
-Structural highlights emphasise the interplay between pocket geometry, ligand size, and predicted binding.
+**Figure 4.** EGFR Exon20 insertion mutant (PDB 9GL8) bound to Afatinib (ligands *red*, key residues *green*). Single hydrogen bond with R841; other structural factors likely enhance docking score.
 
 ---
 
