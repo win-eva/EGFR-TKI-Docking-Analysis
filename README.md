@@ -30,6 +30,11 @@ All results presented here were generated from the provided `.log` files; runnin
 
 ### Binding Affinity Table
 
+- Control ligands bind weakly, validating the docking workflow.  
+- Osimertinib retains strong binding to T790M, consistent with clinical activity.  
+- Mobocertinib shows strong predicted affinity for L858R and Exon20 mutants.  
+- High standard deviations (e.g., Exon20) highlight PDB-specific differences and potential limitations of static docking.
+
 **Table 1.** Predicted binding affinities (kcal/mol, mean ± SD) from AutoDock Vina for EGFR wildtype and mutant receptors. Lower values = stronger predicted binding.
 
 | EGFR receptor | Afatinib | Aspirin (control) | Caffeine (control) | Erlotinib | Gefitinib | Ibuprofen (control) | Mobocertinib | Osimertinib |
@@ -39,36 +44,32 @@ All results presented here were generated from the provided `.log` files; runnin
 | T790M         | -7.73 ± 0.69 | -5.06 ± 0.35 | -5.16 ± 0.15 | -6.56 ± 0.61 | -7.54 ± 0.67 | -5.98 ± 0.24 | -7.68 ± 0.29 | -7.84 ± 0.64 |
 | Exon20        | -9.12 ± 0.33 | -5.93 ± 0.61 | -5.75 ± 0.18 | -7.91 ± 0.42 | -8.93 ± 0.33 | -6.74 ± 0.44 | -8.40 ± 0.75 | -8.69 ± 0.63 |
 
-**Key observations:** 
-- Control ligands bind weakly, validating the docking workflow.  
-- Osimertinib retains strong binding to T790M, consistent with clinical activity.  
-- Mobocertinib shows strong predicted affinity for L858R and Exon20 mutants.  
-- High standard deviations (e.g., Exon20) highlight PDB-specific differences and potential limitations of static docking.
-
 ---
 
 ### Heatmap
 
-![Heatmap](results/figures/heatmap.png)  
-**Figure 1.** Heatmap of predicted binding affinities (kcal/mol) across EGFR wildtype and mutant receptors. The most effective ligand for each receptor is circled in black, allowing quick comparison of trends in inhibitor activity across mutation classes.
-
-**Key observations:**
 - **Wildtype EGFR**: Mobocertinib appears strongest, but a single high-affinity PDB (8F1X, -8.73 kcal/mol) likely skews the result.
 - **L858R**: Afatinib and first-generation inhibitors (Gefitinib, Erlotinib) bind well, consistent with literature; Mobocertinib shows moderate affinity.
 - **T790M**: Osimertinib maintains strong binding, as expected; first-generation inhibitors are weaker due to resistance mutation.
 - **Exon20 insertion**: Afatinib shows highest docking affinity, likely influenced by pocket geometry in selected PDBs; clinical data suggest limited efficacy.
 - **Controls (Aspirin, Ibuprofen, Caffeine):** Low binding across all receptors, validating specificity.
 
+![Heatmap](results/figures/heatmap.png)  
+**Figure 1.** Heatmap of predicted binding affinities (kcal/mol) across EGFR wildtype and mutant receptors. The most effective ligand for each receptor is circled in black, allowing quick comparison of trends in inhibitor activity across mutation classes.
+
 ---
 
 ### Structural Highlights (PyMOL)
 
 **L858R mutation**  
-Comparison of binding in the same pocket:  
-- **Osimertinib**: 2 H-bonds (T854), weaker predicted fit  
-- **Mobocertinib**: 4 H-bonds (M793, T790, L718), stronger predicted fit  
+
+- Both ligands occupy the same L858R pocket.
+- **Osimertinib:** 2 H-bonds → weaker fit.
+- **Mobocertinib:** 4 H-bonds → stronger fit.
+- Mobocertinib’s shape/flexibility allows additional interactions, boosting its docking score. 
 
 ![L858R pocket](results/figures/l858r.png)
+**Figure 2.** L858R EGFR bound to Osimertinib (co-crystallised, PDB 6JWL) and Mobocertinib. Mobocertinib forms more hydrogen bonds in the same pocket, explaining its stronger predicted docking score.
 
 ---
 
