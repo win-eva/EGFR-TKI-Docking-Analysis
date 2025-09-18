@@ -99,17 +99,12 @@ Structural highlights emphasise the interplay between pocket geometry, ligand si
 
 ## References
 
-Trott, O. & Olson, A. J. AutoDock Vina: improving the speed and accuracy of docking with a new scoring function. J Comput Chem 2010, 31, 455–461.
-
-RDKit: http://www.rdkit.org
-
-Meeko: https://github.com/forlilab/meeko
-
-PyMOL: https://pymol.org
-
-Protein Data Bank (PDB): https://www.rcsb.org
-
-ChEMBL Database: https://www.ebi.ac.uk/chembl/
+- Trott, O. & Olson, A. J. *AutoDock Vina: improving the speed and accuracy of docking with a new scoring function.* J Comput Chem 2010, 31, 455–461.
+- RDKit: http://www.rdkit.org
+- Meeko: https://github.com/forlilab/meeko
+- PyMOL: https://pymol.org
+- Protein Data Bank (PDB): https://www.rcsb.org
+- ChEMBL Database: https://www.ebi.ac.uk/chembl/
 
 ---
 
