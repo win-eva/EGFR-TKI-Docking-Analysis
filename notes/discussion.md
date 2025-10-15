@@ -1,6 +1,6 @@
 ## Discussion
 
-While docking results are inherently indicative rather than definitive, they still reveal consistent structural trends ([Morris & Lim-Wilby, 2008](https://link.springer.com/protocol/10.1007/978-1-59745-177-2_19)). Because molecular docking assumes a rigid receptor, omits solvent and dynamic effects, and cannot model covalent interactions ([Sousa et al., 2006](https://onlinelibrary.wiley.com/doi/10.1002/prot.21082)), the predicted affinities should be interpreted as comparative rather than absolute.
+While docking results are inherently **indicative** rather than definitive, they still reveal consistent structural trends ([Morris & Lim-Wilby, 2008](https://link.springer.com/protocol/10.1007/978-1-59745-177-2_19)). Because molecular docking assumes a rigid receptor, omits solvent and dynamic effects, and cannot model covalent interactions ([Sousa et al., 2006](https://onlinelibrary.wiley.com/doi/10.1002/prot.21082)), the predicted affinities should be interpreted as comparative rather than absolute.
 
 ---
 
@@ -25,17 +25,17 @@ Mobocertinib and Osimertinib show lower predicted binding than Afatinib, despite
 ### Methodological and Dataset Limitations
 
 - **PDB scarcity and heterogeneity:** EGFR structures suitable for docking are limited. Wildtype uses panel ligands, Exon20 uses only non-panel ones, and L858R/T790M are mixed, introducing comparability bias.  
-- **Resolution variance:** Some PDBs (e.g., 4G5P at 3.17 Å) have lower resolution, which can distort side-chain geometry and hydrogen bond positioning—both critical for accurate docking scores.  
+- **Resolution variance:** Some PDBs (e.g., 4G5P at 3.17 Å) have lower resolution, which can distort side-chain geometry and hydrogen bond positioning. Both are critical for accurate docking scores ([Morris & Lim-Wilby, 2008](https://link.springer.com/protocol/10.1007/978-1-59745-177-2_19)).  
 - **Limited ligand pool:** Only three TKIs per receptor (representing different generations) were used, balancing generation coverage against data availability. Outlier structures can thus disproportionately influence mean values.  
-- **Rigid docking assumptions:** AutoDock Vina cannot capture protein flexibility, solvent dynamics, or covalent chemistry. This limitation is particularly relevant for **Afatinib** and **Osimertinib**, which form covalent bonds with Cys797 in the EGFR active site.  
-- **Biological extrapolation:** Docking estimates potential binding affinity but not actual inhibitory potency. Factors such as ATP competition, cellular uptake, and steric hindrance strongly affect *in vivo* efficacy.
+- **Rigid docking assumptions:** AutoDock Vina cannot capture protein flexibility, solvent dynamics, or covalent chemistry ([Trott & Olson, 2010](https://pubmed.ncbi.nlm.nih.gov/19499576/)). This limitation is particularly relevant for **Afatinib** and **Osimertinib**, which form covalent bonds with C797 in the EGFR active site ([Shi et al., 2022](https://jhoonline.biomedcentral.com/articles/10.1186/s13045-022-01311-6)).  
+- **Biological extrapolation:** Docking estimates potential binding affinity but not actual inhibitory potency. Factors such as ATP competition, cellular uptake, and steric hindrance strongly affect *in vivo* efficacy ([Morris & Lim-Wilby, 2008](https://link.springer.com/protocol/10.1007/978-1-59745-177-2_19)).
 
 ---
 
 ### Future Directions
 
 - **Molecular Dynamics (MD) simulations:** MD could capture receptor flexibility and solvent interactions, allowing refinement of docking poses and estimation of realistic binding free energies.  
-- **Covalent docking workflows:** Incorporating reactive warheads and explicit modeling of bond formation with Cys797 (e.g., using CovDock, GOLD, or AutoDockFR with reactive templates) would better represent Afatinib and Osimertinib’s irreversible mechanisms.  
+- **Covalent docking workflows:** Incorporating reactive warheads and explicit modelling of bond formation with C797 (e.g., using CovDock, GOLD, or AutoDockFR with reactive templates) would better represent Afatinib and Osimertinib’s irreversible mechanisms.  
 - **Expanded structural dataset:** Including more high-resolution PDBs, especially for Exon20 insertions, and a broader range of ligands could improve statistical robustness.  
 - **Free-energy calculations (MM/PBSA, FEP):** Post-docking free energy methods can refine relative ΔG values for more quantitative comparisons.  
 - **Experimental correlation:** Linking computational predictions to measured affinities (e.g., K<sub>d</sub>, IC<sub>50</sub>) and clinical outcomes would validate and calibrate the docking workflow.
@@ -44,6 +44,6 @@ Mobocertinib and Osimertinib show lower predicted binding than Afatinib, despite
 
 ### Conclusion
 
-This docking-based analysis recapitulates key trends in EGFR–TKI interactions—Osimertinib’s resilience to T790M, Gefitinib’s preference for L858R, and Mobocertinib’s selectivity for Exon20 variants—while also highlighting discrepancies such as Afatinib’s overestimated binding in silico. These findings underscore both the interpretive value and inherent limitations of docking, and provide hypotheses for more detailed studies using molecular dynamics or experimental validation.
+This docking-based analysis recapitulates key trends in EGFR–TKI interactions; Osimertinib’s resilience to T790M, Gefitinib’s preference for L858R, and Mobocertinib’s selectivity for Exon20 variants. Concurretnly, it is also highlighting discrepancies such as Afatinib’s overestimated binding *in silico*. These findings underscore both the interpretive value and inherent limitations of docking, and provide hypotheses for more detailed studies using molecular dynamics or experimental validation.
 
 ---
