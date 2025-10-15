@@ -1,0 +1,50 @@
+## Discussion
+
+While docking results are inherently indicative rather than definitive, they still reveal consistent structural trends. Because molecular docking assumes a rigid receptor, omits solvent and dynamic effects, and cannot model covalent interactions, the predicted affinities should be interpreted as comparative rather than absolute.
+
+---
+
+### Trends Observed and Literature Context
+
+**Wildtype EGFR**  
+Mobocertinib appears to have the strongest predicted binding overall, but this is heavily influenced by the 8F1X structure (−8.73 kcal/mol). Other ligands (Afatinib, Gefitinib) show more consistent binding across multiple PDBs. Control ligands (Aspirin, Caffeine, Ibuprofen) bind weakly across all receptors, confirming the docking workflow’s specificity.
+
+**L858R mutation**  
+Afatinib and Mobocertinib show strong predicted affinities, while first-generation inhibitors (Gefitinib, Erlotinib) are slightly weaker. This pattern is consistent with experimental studies showing that Gefitinib binds more tightly to L858R than wildtype EGFR due to improved activation loop complementarity ([Yun et al., 2007](https://pmc.ncbi.nlm.nih.gov/articles/PMC1939942/); [Gajiwala et al., 2013](https://www.cell.com/structure/fulltext/S0969-2126%2812%2900429-7)). While Afatinib’s irreversible binding mechanism theoretically enhances inhibition, there is limited direct structural data comparing its relative binding strength to first-generation TKIs in this context.
+
+**T790M mutation**  
+Osimertinib retains strong predicted binding across PDBs, aligning with its established efficacy against T790M-mediated resistance. First-generation inhibitors show reduced predicted affinity, though not drastically—reflecting docking’s inability to fully model steric hindrance and induced conformational changes. Structural analyses confirm that T790M increases ATP affinity and alters pocket geometry, limiting earlier inhibitors’ effectiveness ([Kobayashi et al., 2005](https://pubmed.ncbi.nlm.nih.gov/15998909/); [Yun et al., 2008](https://pubmed.ncbi.nlm.nih.gov/18559453/)).
+
+**Exon20 insertion**  
+Afatinib is predicted to bind most strongly (−9.4 kcal/mol in PDB 9GL8) despite forming only one hydrogen bond (R841). This contradicts clinical evidence, where Afatinib monotherapy shows poor response rates and short progression-free survival in Exon20 insertion NSCLC (objective response rates typically <25%) ([Park et al., 2021](https://pubmed.ncbi.nlm.nih.gov/34647988/)). The discrepancy likely arises from static docking artifacts—pocket geometry, conformational bias, and absence of solvent effects—that over-favor Afatinib in silico.  
+Mobocertinib and Osimertinib show moderate predicted binding, consistent with their reported preclinical and clinical activity in Exon20 insertion mutants ([Zhou et al., 2021](https://jamanetwork.com/journals/jamaoncology/fullarticle/2784882); [Li et al., 2022](https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2022.1010311/full)).
+
+High standard deviations in the Exon20 dataset—greater than in other mutation classes—reflect structural heterogeneity among available PDBs and the fact that all Exon20 docking runs used **non-panel ligands**, increasing pose variability.
+
+---
+
+### Methodological and Dataset Limitations
+
+- **PDB scarcity and heterogeneity:** EGFR structures suitable for docking are limited. Wildtype uses panel ligands, Exon20 uses only non-panel ones, and L858R/T790M are mixed, introducing comparability bias.  
+- **Resolution variance:** Some PDBs (e.g., 4G5P at 3.17 Å) have lower resolution, which can distort side-chain geometry and hydrogen bond positioning—both critical for accurate docking scores.  
+- **Limited ligand pool:** Only three TKIs per receptor (representing different generations) were used, balancing generation coverage against data availability. Outlier structures can thus disproportionately influence mean values.  
+- **Rigid docking assumptions:** AutoDock Vina cannot capture protein flexibility, solvent dynamics, or covalent chemistry. This limitation is particularly relevant for **Afatinib** and **Osimertinib**, which form covalent bonds with Cys797 in the EGFR active site.  
+- **Biological extrapolation:** Docking estimates potential binding affinity but not actual inhibitory potency. Factors such as ATP competition, cellular uptake, and steric hindrance strongly affect in vivo efficacy.
+
+---
+
+### Future Directions
+
+- **Molecular Dynamics (MD) simulations:** MD could capture receptor flexibility and solvent interactions, allowing refinement of docking poses and estimation of realistic binding free energies.  
+- **Covalent docking workflows:** Incorporating reactive warheads and explicit modeling of bond formation with Cys797 (e.g., using CovDock, GOLD, or AutoDockFR with reactive templates) would better represent Afatinib and Osimertinib’s irreversible mechanisms.  
+- **Expanded structural dataset:** Including more high-resolution PDBs, especially for Exon20 insertions, and a broader range of ligands could improve statistical robustness.  
+- **Free-energy calculations (MM/PBSA, FEP):** Post-docking free energy methods can refine relative ΔG values for more quantitative comparisons.  
+- **Experimental correlation:** Linking computational predictions to measured affinities (e.g., K<sub>d</sub>, IC<sub>50</sub>) and clinical outcomes would validate and calibrate the docking workflow.
+
+---
+
+### Conclusion
+
+This docking-based analysis recapitulates key trends in EGFR–TKI interactions—Osimertinib’s resilience to T790M, Gefitinib’s preference for L858R, and Mobocertinib’s selectivity for Exon20 variants—while also highlighting discrepancies such as Afatinib’s overestimated binding in silico. These findings underscore both the interpretive value and inherent limitations of docking, and provide hypotheses for more detailed studies using molecular dynamics or experimental validation.
+
+---
