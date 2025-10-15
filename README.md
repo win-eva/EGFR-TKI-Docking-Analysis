@@ -49,7 +49,7 @@ All results presented here were generated from the provided `.log` files; runnin
 ### Heatmap
 
 - **Wildtype EGFR**: Mobocertinib appears strongest, but a single high-affinity PDB (8F1X, -8.73 kcal/mol) likely skews the result.
-- **L858R**: Afatinib and first-generation inhibitors (Gefitinib, Erlotinib) bind well, consistent with literature; Mobocertinib shows moderate affinity.
+- **L858R**: Mobocertinib binds strongest, followed by Afatinib, Gefitinib ≈ Osimertinib, and Erlotinib weakest, consistent with structural and docking studies.
 - **T790M**: Osimertinib maintains strong binding, as expected; first-generation inhibitors are weaker due to resistance mutation.
 - **Exon20 insertion**: Afatinib shows highest docking affinity, likely influenced by pocket geometry in selected PDBs; clinical data suggest limited efficacy.
 - **Controls (Aspirin, Ibuprofen, Caffeine):** Low binding across all receptors, validating specificity.
