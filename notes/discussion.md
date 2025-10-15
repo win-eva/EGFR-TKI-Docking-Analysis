@@ -7,7 +7,7 @@ While docking results are inherently indicative rather than definitive, they sti
 ### Trends Observed and Literature Context
 
 **Wildtype EGFR**  
-Mobocertinib appears to have the strongest predicted binding overall, but this is heavily influenced by the 8F1X structure (−8.73 kcal/mol). Other ligands (Afatinib, Gefitinib) show more consistent binding across multiple PDBs. Control ligands (Aspirin, Caffeine, Ibuprofen) bind weakly across all receptors, confirming the docking workflow’s specificity.
+For wild-type EGFR, Mobocertinib appears strongest in docking, but this is heavily skewed by a single high-affinity PDB (8F1X) ([Wang et al., 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9433531/)). Afatinib and Gefitinib show more consistent binding, aligning with literature reports of their moderate-to-strong wild-type affinity ([Kim et al., 2012](https://pmc.ncbi.nlm.nih.gov/articles/PMC3390174/)). Control ligands bind weakly, validating the specificity of the docking workflow.
 
 **L858R mutation**  
 Afatinib and Mobocertinib show strong predicted affinities, while first-generation inhibitors (Gefitinib, Erlotinib) are slightly weaker. This pattern is consistent with experimental studies showing that Gefitinib binds more tightly to L858R than wildtype EGFR due to improved activation loop complementarity ([Yun et al., 2007](https://pmc.ncbi.nlm.nih.gov/articles/PMC1939942/); [Gajiwala et al., 2013](https://www.cell.com/structure/fulltext/S0969-2126%2812%2900429-7)). While Afatinib’s irreversible binding mechanism theoretically enhances inhibition, there is limited direct structural data comparing its relative binding strength to first-generation TKIs in this context.
