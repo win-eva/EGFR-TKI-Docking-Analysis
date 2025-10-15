@@ -1,6 +1,6 @@
 ## Discussion
 
-While docking results are inherently indicative rather than definitive, they still reveal consistent structural trends. Because molecular docking assumes a rigid receptor, omits solvent and dynamic effects, and cannot model covalent interactions, the predicted affinities should be interpreted as comparative rather than absolute.
+While docking results are inherently indicative rather than definitive, they still reveal consistent structural trends ([Morris & Lim-Wilby, 2008](https://link.springer.com/protocol/10.1007/978-1-59745-177-2_19)). Because molecular docking assumes a rigid receptor, omits solvent and dynamic effects, and cannot model covalent interactions ([Sousa et al., 2006](https://onlinelibrary.wiley.com/doi/10.1002/prot.21082)), the predicted affinities should be interpreted as comparative rather than absolute.
 
 ---
 
