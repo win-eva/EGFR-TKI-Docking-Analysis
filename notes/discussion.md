@@ -34,11 +34,11 @@ Mobocertinib and Osimertinib show lower predicted binding than Afatinib, despite
 
 ### Future Directions
 
-- **Molecular Dynamics (MD) simulations:** MD could capture receptor flexibility and solvent interactions, allowing refinement of docking poses and estimation of realistic binding free energies.  
-- **Covalent docking workflows:** Incorporating reactive warheads and explicit modelling of bond formation with C797 (e.g., using CovDock, GOLD, or AutoDockFR with reactive templates) would better represent Afatinib and Osimertinib’s irreversible mechanisms.  
+- **Molecular Dynamics (MD) simulations:** MD could capture receptor flexibility and solvent interactions, allowing refinement of docking poses and estimation of realistic binding free energies ([AlRawashdeh & Barakat, 2024](https://pubmed.ncbi.nlm.nih.gov/37676596/)).  
+- **Covalent docking workflows:** Incorporating reactive warheads and explicit modelling of bond formation with C797 (e.g., using CovDock, GOLD, or AutoDockFR with reactive templates) would better represent Afatinib and Osimertinib’s irreversible mechanisms ([London et al., 2014](https://pubmed.ncbi.nlm.nih.gov/25344815/); [Verdonk et al., 2003](https://pubmed.ncbi.nlm.nih.gov/12910460/); [Bianco et al., 2016](https://pubmed.ncbi.nlm.nih.gov/26103917/)).  
 - **Expanded structural dataset:** Including more high-resolution PDBs, especially for Exon20 insertions, and a broader range of ligands could improve statistical robustness.  
-- **Free-energy calculations (MM/PBSA, FEP):** Post-docking free energy methods can refine relative ΔG values for more quantitative comparisons.  
-- **Experimental correlation:** Linking computational predictions to measured affinities (e.g., K<sub>d</sub>, IC<sub>50</sub>) and clinical outcomes would validate and calibrate the docking workflow.
+- **Free-energy calculations (MM/PBSA, FEP):** Post-docking free energy methods can refine relative ΔG values for more quantitative comparisons ([Kollman, 1993](https://pubs.acs.org/doi/abs/10.1021/cr00023a004)).  
+- **Experimental correlation:** Linking computational predictions to measured affinities (e.g., K<sub>d</sub>, IC<sub>50</sub>) and clinical outcomes would validate and calibrate the docking workflow ([Morris & Lim-Wilby, 2008](https://link.springer.com/protocol/10.1007/978-1-59745-177-2_19)).
 
 ---
 
