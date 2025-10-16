@@ -60,7 +60,7 @@ Docking was performed using **AutoDock Vina 1.2.7**:
 
 - Receptor `.pdbqt` files and ligand `.pdbqt` files were used.
 - Grid boxes were centered on the original ligand binding sites.
-- Exhaustiveness: 8
+- Exhaustiveness was fixed at 8 to balance computational cost with search depth across the large PDB panel.
 - Number of modes: 1
 - Docking outputs were saved in the `docking_results` folder.
 
@@ -69,7 +69,7 @@ Docking was performed using **AutoDock Vina 1.2.7**:
 ## 5. Analysis
 
 - Affinities extracted from Vina log files.
-- Mean and standard deviation were calculated per mutation class.
+- Mean and standard deviation were calculated per mutation class; chosen to reflect reproducibility across structurally diverse receptor datasets.
 - Heatmaps and tables highlight the best binding ligand per receptor.
 - Docked PDBQT poses were visualised in **PyMOL**, including hydrogen bond analysis.
 
@@ -87,7 +87,7 @@ Docking was performed using **AutoDock Vina 1.2.7**:
 All software executables were obtained from official sources and used without modification.
 1. RDKit: RDKit: Open-source cheminformatics; http://www.rdkit.org  
 2. Meeko: Meeko: Ligand Preparation Tool; https://github.com/forlilab/meeko  
-3. AutoDock Vina: Trott, O., Olson, A. J. AutoDock Vina: improving the speed and accuracy of docking with a new scoring function. *J Comput Chem* 2010, 31, 455–461.  
+3. AutoDock Vina: Trott, O., Olson, A. J. *AutoDock Vina: improving the speed and accuracy of docking with a new scoring function.* *J Comput Chem* **2010**, *31*, 455–461.  
 4. PyMOL: Schrödinger, LLC. PyMOL. https://pymol.org  
 5. MGLTools: Morris et al., AutoDockTools, 2009.  
 6. Protein Data Bank (PDB): Berman, H. M., et al. The Protein Data Bank. *Nucleic Acids Res* 2000, 28, 235–242. https://www.rcsb.org  
