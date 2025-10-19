@@ -1,6 +1,6 @@
 # EGFR TKI Docking Analysis
 
-This repository presents a computational assessment of EGFR wildtype and clinically relevant **resistance mutations** (**L858R, T790M, Exon20 insertions**) against representative tyrosine kinase inhibitors (TKIs) and control ligands (aspirin, caffeine, ibuprofen). Predicted binding affinities were generated using AutoDock Vina, with supporting structural visualisations and interpretive notes.
+This repository presents a computational assessment of EGFR wildtype and clinically relevant **resistance mutations** (**L858R, T790M, Exon20 insertions**) against representative tyrosine kinase inhibitors (TKIs) and control ligands (aspirin, caffeine, ibuprofen). Predicted binding affinities were generated using *AutoDock Vina*, with supporting structural visualisations and interpretive notes.
 
 The aim is to explore how common resistance mutations may affect inhibitor binding and to highlight the strengths and limitations of docking as a predictive tool.
 
