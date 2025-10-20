@@ -98,7 +98,7 @@ All results presented here were generated from the provided `.log` files; runnin
 
 ## Discussion & Limitations
 
-- **Statistical bias:** Some receptors, like Wildtype, appear to favor particular TKIs due to strong-binding PDBs (e.g., 8F1X).
+- **Statistical bias:** Some receptors, like Wildtype, appear to favour particular TKIs due to strong-binding PDBs (e.g., 8F1X).
 - **Exon20 pocket:** Larger surrogate ligands may artificially inflate predicted affinities; variability is reflected in SD.
 - **Covalent inhibitors:** Afatinib and Osimertinib form covalent bonds in reality, but Vina only models non-covalent interactions.
 - **Static docking:** Protein flexibility is not captured; dynamic effects would require molecular dynamics simulations.
